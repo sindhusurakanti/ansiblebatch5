@@ -1,0 +1,13 @@
+- hosts: linux
+  vars:
+    teams:
+      - csk
+      - rcb
+      - mi
+      - srh
+  tasks:
+  - name: print variables
+    debug:
+      msg: "{{  item  }}"
+    with_items:
+    - "{{  teams  }}"
